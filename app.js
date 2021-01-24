@@ -80,14 +80,14 @@ function update() {
     let conllLeft = gameState.ball.x - gameState.left.x
     let conllRight = gameState.right.x - gameState.ball.x
     
-    if(conllLeft < 0){
+    if(conllLeft > -8 && conllLeft < 8){
         if(gameState.ball.y < gameState.left.y+32 && gameState.ball.y > gameState.left.y-32){
             gameState.ball.deg = gameState.left.y - gameState.ball.y
             gameState.ball.velocity += 0.1
         }
     }
 
-    if(conllRight < 0){
+    if(conllRight > -8 && conllRight < 8){
         if(gameState.ball.y < gameState.right.y+32 && gameState.ball.y > gameState.right.y-32){
             gameState.ball.deg = 180 - (gameState.right.y - gameState.ball.y)
             gameState.ball.velocity += 0.1
