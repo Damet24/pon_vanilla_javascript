@@ -126,7 +126,7 @@ function drawDashedLine(pattern, x) {
     ctx.moveTo(x, 0);
     ctx.lineTo(x, 400);
     ctx.stroke();
-    x += 20;
+    // x += 20;
 }
 
 function draw() {
